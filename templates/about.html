@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT</title>
+    <style>
+        a{
+            margin-left: 90%;
+            margin-top: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #0c022b;
+            padding: 10px;
+            font-weight: bolder;
+            box-shadow: 5px 5px 5px 5px #04010e;
+            text-decoration: none;
+            font-size: larger;
+            
+            
+        }
+    </style>
+</head>
+<body style=" background-image: url(https://www.nsbpictures.com/wp-content/uploads/2020/04/sunset-hd-background-photos-12-scaled.jpg);background-repeat: no-repeat;background-size: cover;">
+    <a href="{% url 'logout' %}" >LOG OUT</a>
+    <div class="container">
+        {% for  msg in messages %}
+        <div style="margin-top: 200px; text-shadow: 2px 2px #0c022b;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size:40px;font-weight: bolder;">
+        <marquee>{{ msg }}</marquee>
+        </div>
+        {% endfor %}
+        
+        
+    </div>
+    
+            
+        
+    
+</body>
+</html>
